@@ -8,12 +8,42 @@
  */
 public class PictureTester
 {
+
+    public static void testFixUnderwater(){
+	Picture water = new Picture("water.jpg");
+        water.explore();
+        water.fixUnderwater();
+        water.explore();
+    }
+
+    public static void testGreyscale(){
+        Picture beach = new Picture("beach.jpg");
+        beach.explore();
+        beach.greyscale();
+        beach.explore();
+    }
+
+    public static void testNegate(){
+	Picture beach = new Picture("beach.jpg");
+	beach.explore();
+	beach.negate();
+	beach.explore();
+    }
+
   /** Method to test zeroBlue */
   public static void testZeroBlue()
   {
     Picture beach = new Picture("beach.jpg");
     beach.explore();
     beach.zeroBlue();
+    beach.explore();
+  }
+
+  public static void testKeepOnlyBlue()
+  {
+    Picture beach = new Picture("beach.jpg");
+    beach.explore();
+    beach.keepOnlyBlue();
     beach.explore();
   }
   
@@ -25,7 +55,31 @@ public class PictureTester
     caterpillar.mirrorVertical();
     caterpillar.explore();
   }
+
+    public static void testMirrorRighttoLeft()
+    {
+	Picture caterpillar = new Picture("caterpillar.jpg");
+	caterpillar.explore();
+	caterpillar.mirrorRighttoLeft();
+	caterpillar.explore();
+    }
+
+    public static void testMirrorHorizontal()
+    {
+	Picture caterpillar = new Picture("caterpillar.jpg");
+	caterpillar.explore();
+	caterpillar.mirrorHorizontal();
+	caterpillar.explore();
+    }
   
+    public static void testMirrorBottoTop()
+    {
+        Picture caterpillar = new Picture("caterpillar.jpg");
+        caterpillar.explore();
+        caterpillar.mirrorBottoTop();
+        caterpillar.explore();
+    }
+
   /** Method to test mirrorTemple */
   public static void testMirrorTemple()
   {
@@ -58,14 +112,17 @@ public class PictureTester
     // uncomment a call here to run a test
     // and comment out the ones you don't want
     // to run
-    testZeroBlue();
-    //testKeepOnlyBlue();
+    //----testZeroBlue();
+    //----testKeepOnlyBlue();
     //testKeepOnlyRed();
     //testKeepOnlyGreen();
-    //testNegate();
-    //testGrayscale();
-    //testFixUnderwater();
-    //testMirrorVertical();
+    //----testNegate();
+    //----testGreyscale();
+    //----testFixUnderwater();
+    //----testMirrorVertical();
+    //----testMirrorRighttoLeft();
+    //----testMirrorHorizontal();
+      testMirrorBottoTop();
     //testMirrorTemple();
     //testMirrorArms();
     //testMirrorGull();
